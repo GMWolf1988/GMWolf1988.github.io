@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Jersey+20&family=Noto+Sans:ital,wdth,wght@0,99.2,100..900;1,99.2,100..900&family=Share+Tech&family=UnifrakturCook:wght@700&display=swap");
+
+html, body {
+    height: 100%;
+}
+
+* {
+    font-family: 'Google Sans Flex', monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 1rem;
+    background: radial-gradient(circle at top, #1f2233, #0f111a);
+    color: #e4e4e7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-theme {
+    background: radial-gradient(circle at top, #ffffff, #f1f2f6);
+    color: #1a1d29;
+}
+
+/* ===== Base Panels ===== */
+.panel {
+    position: relative;
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow:
+        0 14px 36px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    overflow: hidden;
+    margin-top: -0.25rem;
+}
+
+.panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    filter: blur(24px);
+    opacity: 0.35;
+    z-index: -1;
+}
+
+/* ===== Section Color Themes ===== */
+.projects-panel {
+    background: linear-gradient(
+        135deg,
+        rgba(34, 211, 238, 0.12),
+        rgba(4, 83, 255, 0.322)
+    );
+}
+
+.projects-panel::before {
+    background: linear-gradient(135deg, #15359e, #5bc8f3);
+}
+
+.proficiencies-panel {
+    background: linear-gradient(
+        135deg,
+        rgba(83, 13, 175, 0.12),
+        rgba(0, 38, 255, 0.08)
+    );
+}
+
+.proficiencies-panel::before {
+    background: linear-gradient(135deg, #203632, #ec4899);
+}
+
+body.light-theme .panel {
+    box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* ===== Project Cards ===== */
+.card {
+    background: rgba(128, 128, 128, 0.15);
+    border: 1px solid rgba(200, 200, 200, 0.171);
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border: 1px solid rgba(200, 200, 200, 0.3);
+}
+
+body.light-theme .card {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Tags ===== */
+.tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: rgba(128, 128, 128, 0.15);
+    border: 1px solid rgba(200, 200, 200, 0.171);
+    color: #e4e4e7;
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s ease, border 0.2s ease;
+}
+
+body.light-theme .tag {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #1a1d29;
+}
+
+/* ===== Status Badges ===== */
+.status-badge {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+/* ===== Buttons ===== */
+.theme-toggle,
+.social-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.02)
+    );
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.theme-toggle:hover,
+.social-icon:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.45),
+        inset 0 0 0 1px rgba(139, 92, 246, 0.4);
+}
+
+.terminal-cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* ===== Intro Outline Box ===== */
+.intro-box {
+    position: relative;
+    border-radius: 16px;
+    padding: 1.5rem;
+    background: transparent;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+}
+
+.intro-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(90deg, #656f74, #3f4041);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
