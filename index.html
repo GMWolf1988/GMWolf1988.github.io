@@ -53,9 +53,11 @@
         <section class="panel projects-panel">
             <div class="flex justify-between items-center mb-6">
                 <h2 class="text-xl text-orange-300">Projects</h2>
-                <button class="text-cyan-300 text-sm px-4 py-1.5 rounded-full border border-cyan-300/30 bg-transparent hover:bg-transparent transition">
-                    See more →
-                </button>
+                <button id="openProjectsModal"
+    class="text-cyan-300 text-sm px-4 py-1.5 rounded-full border border-cyan-300/30 bg-transparent hover:bg-transparent transition">
+    See more →
+</button>
+
             </div>
 
             <div class="grid md:grid-cols-3 gap-4">
@@ -174,6 +176,47 @@
             </div>
         </section>
     </div>
+
+    <!-- Projects Modal -->
+<div id="projectsModal" class="modal-overlay hidden">
+    <div class="modal-panel">
+        <button id="closeProjectsModal" class="modal-close">✕</button>
+        <h2 class="text-xl text-orange-300 mb-6">All Projects</h2>
+
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="card">
+                <h3 class="text-base font-medium mb-2">QuestCraft</h3>
+                <p class="text-sm text-gray-400">Procedural quest generation in C#.</p>
+            </div>
+
+            <div class="card">
+                <h3 class="text-base font-medium mb-2">Mighty Putter</h3>
+                <p class="text-sm text-gray-400">2D game built with C++ and SDL.</p>
+            </div>
+
+            <div class="card">
+                <h3 class="text-base font-medium mb-2">Game Hub</h3>
+                <p class="text-sm text-gray-400">Game discovery app in React + TS.</p>
+            </div>
+
+            <div class="card">
+                <h3 class="text-base font-medium mb-2">Dungeon Generator</h3>
+                <p class="text-sm text-gray-400">Procedural dungeon system in Unity.</p>
+            </div>
+
+            <div class="card">
+                <h3 class="text-base font-medium mb-2">Portfolio v2</h3>
+                <p class="text-sm text-gray-400">Modern responsive portfolio redesign.</p>
+            </div>
+
+            <div class="card">
+                <h3 class="text-base font-medium mb-2">Data Dashboard</h3>
+                <p class="text-sm text-gray-400">React analytics dashboard for business data.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <script src="script.js"></script>
 </body>
