@@ -1,11 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Jersey+20&family=Noto+Sans:ital,wdth,wght@0,99.2,100..900;1,99.2,100..900&family=Share+Tech&family=UnifrakturCook:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
 
 html, body {
     height: 100%;
-}
-
-* {
-    font-family: 'Google Sans Flex', monospace;
 }
 
 body {
@@ -14,6 +10,7 @@ body {
     min-height: 100vh;
     padding: 1rem;
     background: radial-gradient(circle at top, #1f2233, #0f111a);
+    font-family: 'Google Sans Flex', monospace;
     color: #e4e4e7;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
