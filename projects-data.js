@@ -9,14 +9,14 @@ const projects = [
     },
     {
         title: "Mighty Putter",
-        description: "A 2D game I developed using C++ and SDL. Showcasing power-ups, logging, and collision detection using the Separating Axis Theorem.",
+        description: "A 2D game I developed using C++ and SDL, showcasing power-ups, logging, and collision detection using the Separating Axis Theorem.",
         status: "Complete",
         statusColor: "green",
         link: "https://github.com/GMWolf1988/mighty-putter"
     },
     {
         title: "Pixl-Blitz",
-        description: "A fast-paced browser-based shooting game I developed with HTML5 Canvas and JavaScript. Using GSAP and pythagorean math.",
+        description: "A fast-paced browser-based shooting game I developed with HTML5 Canvas, JavaScript using GSAP and pythagorean maths.",
         status: "Complete",
         statusColor: "green",
         link: "https://github.com/GMWolf1988/pixl-blitz"
