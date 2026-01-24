@@ -23,28 +23,28 @@ const projects = [
     },
     {
         title: "Game Hub",
-        description: "Game discovery app built with React and TypeScript, featuring search, filtering, and detailed game information.",
+        description: "Game discovery app I built with React, TypeScript, Chakra UI and RAWG API. Featuring search, filtering, and detailed game information.",
         status: "Complete",
         statusColor: "green",
         link: "#"
     },
     {
         title: "Game Of Kingdoms",
-        description: "Procedural dungeon generation system built in Unity with custom algorithms for creating unique playable levels.",
+        description: "A 3D Tower Defense game I built within Unity (C#), using a grid and a A* pathfinding algorithm.",
         status: "Archived",
         statusColor: "blue",
         link: "#"
     },
     {
-        title: "2D ARPG",
-        description: "Modern responsive portfolio redesign with dark/light theme toggle and smooth animations.",
+        title: "The Last Paladin",
+        description: "A 2D ARPG I built within Unity (C#). Players must traverse the level avoiding hazards and enemies.",
         status: "Archived",
         statusColor: "blue",
         link: "#"
     },
     {
-        title: "Hack Slash",
-        description: "React analytics dashboard for visualizing business data with interactive charts and real-time updates.",
+        title: "Sigrid's Revenge",
+        description: " A 2D pixel ARPG i developed in Unity (C#) utilising a robust state machine architecture to ensure clean, scalable, and predictable gameplay behavior.",
         status: "Archived",
         statusColor: "blue",
         link: "#"
@@ -52,15 +52,15 @@ const projects = [
 
       {
         title: "Portfolio Website",
-        description: "React analytics dashboard for visualizing business data with interactive charts and real-time updates.",
+        description: "My portfolio website i designed and developed using Html, JavaScript and Tailwind CSS. Full code here to be used as a template for other developers.",
         status: "Active",
         statusColor: "orange",
         link: "#"
     },
 
       {
-        title: "Dashboard App",
-        description: "React analytics dashboard for visualizing business data with interactive charts and real-time updates.",
+        title: "Holiday Bookings Dashboard",
+        description: "A custom front-end dashboard I designed and developed for tracking confirmed holiday bookings using React, TypeScript, D3, and Bootstrap.",
         status: "Complete",
         statusColor: "green",
         link: "#"
@@ -68,16 +68,26 @@ const projects = [
 ];
 
 // Render projects into a container
+const statusPriority = {
+  green: 1,
+  orange: 2,
+  blue: 3
+};
+
 function renderProjects(container, projectsToShow) {
-    container.innerHTML = projectsToShow.map(project => `
-        <a href="${project.link}" target="_blank" class="card block">
-            <div class="flex justify-between items-start mb-3">
-                <h3 class="text-base font-medium">${project.title}</h3>
-                <span class="status-badge bg-${project.statusColor}-500/20 text-${project.statusColor}-300">${project.status}</span>
-            </div>
-            <p class="text-sm text-gray-400">
-                ${project.description}
-            </p>
-        </a>
-    `).join('');
+  const sorted = [...projectsToShow].sort(
+    (a, b) => statusPriority[a.statusColor] - statusPriority[b.statusColor]
+  );
+
+  container.innerHTML = sorted.map(project => `
+    <a href="${project.link}" target="_blank" class="card block">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-base font-medium">${project.title}</h3>
+        <span class="status-badge bg-${project.statusColor}-500/20 text-${project.statusColor}-300">${project.status}</span>
+      </div>
+      <p class="text-sm text-gray-400">
+        ${project.description}
+      </p>
+    </a>
+  `).join('');
 }

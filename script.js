@@ -39,8 +39,11 @@ seeMoreBtn.addEventListener('click', () => {
             // Render all projects
             renderProjects(projectsContainer, projects);
             
+            // Add YouTube message
+            addYouTubeMessage();
+            
             // Update button text
-            seeMoreBtn.innerHTML = 'See less ←';
+            seeMoreBtn.innerHTML = 'See less ↑';
         }, 300);
         
     } else {
@@ -49,6 +52,9 @@ seeMoreBtn.addEventListener('click', () => {
         
         // Render only first 3 projects
         renderProjects(projectsContainer, projects.slice(0, 3));
+        
+        // Remove YouTube message
+        removeYouTubeMessage();
         
         // Show proficiencies panel
         proficienciesPanel.style.display = 'block';
@@ -62,3 +68,31 @@ seeMoreBtn.addEventListener('click', () => {
         seeMoreBtn.innerHTML = 'See more →';
     }
 });
+
+function addYouTubeMessage() {
+    if (document.getElementById('youtube-message')) return;
+    
+    const message = document.createElement('div');
+    message.id = 'youtube-message';
+    message.className = 'youtube-message';
+    message.innerHTML = `
+        <div class="flex items-center justify-center gap-2 text-sm text-gray-400">
+            <span>More projects I designed and developed can be found on my</span>
+            <a href="https://youtube.com/@YourChannelName" target="_blank" class="youtube-link flex items-center gap-1.5">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                YouTube page
+            </a>
+        </div>
+    `;
+    
+    projectsPanel.appendChild(message);
+}
+
+function removeYouTubeMessage() {
+    const message = document.getElementById('youtube-message');
+    if (message) {
+        message.remove();
+    }
+}

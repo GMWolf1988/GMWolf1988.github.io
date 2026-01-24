@@ -428,3 +428,8 @@ body.light-theme .modal-panel {
     );
 }
 
+.youtube-message {
+    margin-top: 1rem; 
+    padding-top: 1rem;
+}
+
