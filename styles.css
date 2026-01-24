@@ -110,6 +110,24 @@ body.light-theme .proficiencies-panel {
     border-radius: 12px;
     padding: 1.25rem;
     transition: transform 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card > div:first-child {
+    margin-bottom: 0.75rem;
+}
+
+.card h3 {
+    line-height: 1.4;
+    max-width: calc(100% - 90px);
+    flex-shrink: 1;
+}
+
+.card .status-badge {
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .card:hover {

@@ -29,24 +29,40 @@ const projects = [
         link: "#"
     },
     {
-        title: "Dungeon Generator",
+        title: "Game Of Kingdoms",
         description: "Procedural dungeon generation system built in Unity with custom algorithms for creating unique playable levels.",
-        status: "In Progress",
+        status: "Archived",
         statusColor: "blue",
         link: "#"
     },
     {
-        title: "Portfolio v2",
+        title: "2D ARPG",
         description: "Modern responsive portfolio redesign with dark/light theme toggle and smooth animations.",
-        status: "Complete",
-        statusColor: "green",
+        status: "Archived",
+        statusColor: "blue",
         link: "#"
     },
     {
-        title: "Data Dashboard",
+        title: "Hack Slash",
         description: "React analytics dashboard for visualizing business data with interactive charts and real-time updates.",
-        status: "Planning",
-        statusColor: "yellow",
+        status: "Archived",
+        statusColor: "blue",
+        link: "#"
+    },
+
+      {
+        title: "Portfolio Website",
+        description: "React analytics dashboard for visualizing business data with interactive charts and real-time updates.",
+        status: "Active",
+        statusColor: "orange",
+        link: "#"
+    },
+
+      {
+        title: "Dashboard App",
+        description: "React analytics dashboard for visualizing business data with interactive charts and real-time updates.",
+        status: "Complete",
+        statusColor: "green",
         link: "#"
     }
 ];
