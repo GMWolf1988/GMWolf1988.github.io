@@ -138,7 +138,7 @@ function addYouTubeMessage() {
     message.className = 'youtube-message';
     message.innerHTML = `
         <div class="text-center text-sm text-gray-400">
-            <span>Check out my videos on</span>
+            <span>Check out my other projects on</span>
             <a href="https://youtube.com/@garethmason7920" target="_blank" class="video-link underline">
                 Youtube
             </a>
