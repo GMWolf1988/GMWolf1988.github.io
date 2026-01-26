@@ -1,30 +1,75 @@
 let isExpanded = false;
 
-function toggleTheme() {
+// Theme Management
+const themeModal = document.getElementById('themeModal');
+const themeSaveBtn = document.getElementById('themeSaveBtn');
+const themeCancelBtn = document.getElementById('themeCancelBtn');
+let currentThemeSetting = 'system'; // Track the current saved setting
+
+function openThemeModal() {
+    themeModal.classList.remove('hidden');
+    // Set the radio to the current theme setting
+    const radio = document.querySelector(`input[name="theme"][value="${currentThemeSetting}"]`);
+    if (radio) radio.checked = true;
+}
+
+function closeThemeModal() {
+    themeModal.classList.add('hidden');
+}
+
+function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+}
+
+function applyTheme(theme) {
+    const effectiveTheme = theme === 'system' ? getSystemTheme() : theme;
     const body = document.body;
-    body.classList.toggle('light-theme');
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
 
-    document.querySelector('.sun-icon').classList.toggle('hidden');
-    document.querySelector('.moon-icon').classList.toggle('hidden');
+    if (effectiveTheme === 'light') {
+        body.classList.add('light-theme');
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+    } else {
+        body.classList.remove('light-theme');
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+    }
+}
 
-    // Save theme preference to localStorage
-    const isLightTheme = body.classList.contains('light-theme');
-    localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
+function saveTheme() {
+    const selectedTheme = document.querySelector('input[name="theme"]:checked')?.value || 'system';
+    currentThemeSetting = selectedTheme;
+    localStorage.setItem('theme', selectedTheme);
+    applyTheme(selectedTheme);
+    closeThemeModal();
 }
 
 function loadSavedTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        document.body.classList.add('light-theme');
-        document.querySelector('.sun-icon').classList.add('hidden');
-        document.querySelector('.moon-icon').classList.remove('hidden');
-    }
+    const savedTheme = localStorage.getItem('theme') || 'system';
+    currentThemeSetting = savedTheme;
+    applyTheme(savedTheme);
 }
+
+// Listen for system theme changes
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', () => {
+    if (currentThemeSetting === 'system') {
+        applyTheme('system');
+    }
+});
 
 // Initialize projects and theme on page load
 document.addEventListener('DOMContentLoaded', () => {
     // Load saved theme preference
     loadSavedTheme();
+
+    // Theme modal event listeners
+    themeSaveBtn.addEventListener('click', saveTheme);
+    themeCancelBtn.addEventListener('click', closeThemeModal);
+    themeModal.addEventListener('click', (e) => {
+        if (e.target === themeModal) closeThemeModal();
+    });
 
     const projectsContainer = document.querySelector('.projects-grid');
     renderProjects(projectsContainer, projects.slice(0, 3));
