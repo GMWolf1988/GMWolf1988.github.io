@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
 
-html, body {
-    height: 100%;
-}
 
 body {
     display: flex;
@@ -25,8 +22,6 @@ body.light-theme {
     position: relative;
     border-radius: 16px;
     padding: 1.5rem;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
     box-shadow:
         0 14px 36px rgba(0, 0, 0, 0.35),
         inset 0 1px 0 rgba(255, 255, 255, 0.04);
@@ -39,7 +34,6 @@ body.light-theme {
     position: absolute;
     inset: 0;
     border-radius: 16px;
-    filter: blur(24px);
     opacity: 0.35;
     z-index: -1;
 }
