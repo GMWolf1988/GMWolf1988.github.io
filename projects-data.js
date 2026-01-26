@@ -8,6 +8,13 @@ const projects = [
         link: "https://github.com/GMWolf1988/QuestCraft"
     },
     {
+        title: "Coffee Cafe Website",
+        description: "A modern, responsive frontend I designed for a coffee shop website. Built with React, TypeScript, and Chakra UI.",
+        status: "Complete",
+        statusColor: "green",
+        link: "https://github.com/GMWolf1988/coffee-cafe"
+    },
+    {
         title: "Mighty Putter",
         description: "A 2D game I developed using C++ and SDL, showcasing power-ups, logging, and collision detection using the Separating Axis Theorem.",
         status: "Complete",
