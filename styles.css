@@ -152,7 +152,6 @@ body.light-theme .card:hover {
     background: rgba(128, 128, 128, 0.15);
     border: 1px solid rgba(200, 200, 200, 0.171);
     color: #e4e4e7;
-    backdrop-filter: blur(4px);
     transition: transform 0.2s ease, border 0.2s ease;
 }
 
