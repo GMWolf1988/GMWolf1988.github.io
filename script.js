@@ -6,10 +6,26 @@ function toggleTheme() {
 
     document.querySelector('.sun-icon').classList.toggle('hidden');
     document.querySelector('.moon-icon').classList.toggle('hidden');
+
+    // Save theme preference to localStorage
+    const isLightTheme = body.classList.contains('light-theme');
+    localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
 }
 
-// Initialize projects on page load
+function loadSavedTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        document.querySelector('.sun-icon').classList.add('hidden');
+        document.querySelector('.moon-icon').classList.remove('hidden');
+    }
+}
+
+// Initialize projects and theme on page load
 document.addEventListener('DOMContentLoaded', () => {
+    // Load saved theme preference
+    loadSavedTheme();
+
     const projectsContainer = document.querySelector('.projects-grid');
     renderProjects(projectsContainer, projects.slice(0, 3));
 });
