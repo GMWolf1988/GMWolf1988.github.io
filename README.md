@@ -1,8 +1,8 @@
 # My Portfolio Wesbite
 
-Welcome to my portfolio repository!
-
 ## Overview
+
+Welcome to my portfolio repository!
 
 This is a modern, responsive portfolio website i built for myself, as a software developer with a games computing background. The site features a sleek, glassmorphic design with dynamic theme switching, animated project displays, and an expandable interface that showcases technical skills and project work. Fully responsive for any media device for clear reading.
 
