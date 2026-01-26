@@ -12,7 +12,7 @@ const projects = [
         description: "A 2D game I developed using C++ and SDL, showcasing power-ups, logging, and collision detection using the Separating Axis Theorem.",
         status: "Complete",
         statusColor: "green",
-        link: "https://github.com/GMWolf1988/mighty-putter"
+        link: "https://github.com/GMWolf1988/Mighty-Putter-SDL-Cpp"
     },
     {
         title: "Pixl-Blitz",
