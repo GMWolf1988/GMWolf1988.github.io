@@ -22,32 +22,32 @@ const projects = [
         link: "https://github.com/GMWolf1988/pixl-blitz"
     },
     {
-        title: "Game Hub",
+        title: "Game Hub Website",
         description: "Game discovery app I built with React, TypeScript, Chakra UI and RAWG API. Featuring search, filtering, and detailed game information.",
         status: "Complete",
         statusColor: "green",
-        link: "#"
+        link: "https://github.com/GMWolf1988/game-hub-website"
     },
     {
         title: "Game Of Kingdoms",
         description: "A 3D Tower Defense game I built within Unity (C#), using a grid and a A* pathfinding algorithm.",
         status: "Archived",
         statusColor: "blue",
-        link: "#"
+        link: "https://github.com/GMWolf1988/Game_Of_Kingdoms"
     },
     {
         title: "The Last Paladin",
         description: "A 2D ARPG I built within Unity (C#). Players must traverse the level avoiding hazards and enemies.",
         status: "Archived",
         statusColor: "blue",
-        link: "#"
+        link: "https://github.com/GMWolf1988/The-Last-Paladin"
     },
     {
         title: "Sigrid's Revenge",
         description: " A 2D pixel ARPG i developed in Unity (C#) utilising a robust state machine architecture to ensure clean, scalable, and predictable gameplay behavior.",
         status: "Archived",
         statusColor: "blue",
-        link: "#"
+        link: "https://github.com/GMWolf1988/Sigrids-Revenge"
     },
 
       {
@@ -55,16 +55,8 @@ const projects = [
         description: "My portfolio website i designed and developed using Html, JavaScript and Tailwind CSS. Full code here to be used as a template for other developers.",
         status: "Active",
         statusColor: "orange",
-        link: "#"
+        link: "https://github.com/GMWolf1988/My-Portfolio"
     },
-
-      {
-        title: "Holiday Bookings Dashboard",
-        description: "A custom front-end dashboard I designed and developed for tracking confirmed holiday bookings using React, TypeScript, D3, and Bootstrap.",
-        status: "Complete",
-        statusColor: "green",
-        link: "#"
-    }
 ];
 
 // Render projects into a container
