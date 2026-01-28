@@ -266,6 +266,8 @@ body.light-theme .social-icon svg {
 .projects-panel button {
     transition: all 0.3s ease;
     position: relative;
+    min-width: 110px;
+    text-align: center;
 }
 
 .projects-panel button:hover {
