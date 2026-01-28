@@ -16,7 +16,7 @@ const projects = [
     },
     {
         title: "Editorial Theme",
-        description: "A fully responsive website theme I developed using HTML5, SASS, and Bootstrap, based on the HTML5 UP Editorial design.",
+        description: "A fully responsive website theme I developed using HTML5, Sass, and Bootstrap, based on the HTML5 UP Editorial design.",
         status: "Complete",
         statusColor: "green",
         link: "https://github.com/GMWolf1988/html5-sass-bootstrap"
