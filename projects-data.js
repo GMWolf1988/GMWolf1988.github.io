@@ -15,7 +15,7 @@ const projects = [
         link: "https://github.com/GMWolf1988/coffee-cafe"
     },
     {
-        title: "Editorial Website",
+        title: "Editorial Theme",
         description: "A fully responsive website theme I developed using HTML5, SASS, and Bootstrap, based on the HTML5 UP Editorial design.",
         status: "Complete",
         statusColor: "green",
@@ -36,7 +36,7 @@ const projects = [
         link: "https://github.com/GMWolf1988/pixl-blitz"
     },
     {
-        title: "Game Hub Website",
+        title: "Game Hub",
         description: "Game discovery app I built with React, TypeScript, Chakra UI and RAWG API. Featuring search, filtering, and detailed game information.",
         status: "Complete",
         statusColor: "green",
@@ -65,7 +65,7 @@ const projects = [
     },
 
       {
-        title: "Portfolio Website",
+        title: "My Portfolio",
         description: "My portfolio website i designed and developed using Html, JavaScript and Tailwind CSS. Full code here to be used as a template for other developers.",
         status: "Active",
         statusColor: "orange",
