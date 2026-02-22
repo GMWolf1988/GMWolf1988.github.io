@@ -2,7 +2,7 @@
 const projects = [
    {
         title: "Data Scrapper",
-        description: "A modular, easy-to-use web scraping application I developed using Python and TTkinter for the GUI.",
+        description: "A modular, easy-to-use web scraping application I developed using Python and TTkinter for the GUI. Fully automated testing with Pytest.",
         status: "Complete",
         statusColor: "green",
         link: "https://github.com/GMWolf1988/data-scrapper"
