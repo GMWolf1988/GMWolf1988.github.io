@@ -8,18 +8,18 @@ const projects = [
         link: "https://github.com/GMWolf1988/data-scrapper"
     },
     {
-        title: "Coffee Cafe",
-        description: "A modern, responsive frontend I designed for a coffee shop website. Built with React, TypeScript, and Chakra UI.",
-        status: "Complete",
-        statusColor: "green",
-        link: "https://github.com/GMWolf1988/coffee-cafe"
-    },
-    {
         title: "Editorial Theme",
         description: "A fully responsive website theme I developed using HTML5, Sass, and Bootstrap, based on the HTML5 UP Editorial design.",
         status: "Complete",
         statusColor: "green",
         link: "https://github.com/GMWolf1988/html5-sass-bootstrap"
+    },
+    {
+        title: "Coffee Cafe",
+        description: "A modern, responsive frontend I designed for a coffee shop website. Built with React, TypeScript, and Chakra UI.",
+        status: "Complete",
+        statusColor: "green",
+        link: "https://github.com/GMWolf1988/coffee-cafe"
     },
    {   
         title: "QuestCraft",

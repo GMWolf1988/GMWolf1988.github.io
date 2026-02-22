@@ -126,7 +126,7 @@ seeMoreBtn.addEventListener('click', () => {
         }, 50);
         
         // Update button text
-        seeMoreBtn.innerHTML = 'See more →';
+        seeMoreBtn.innerHTML = 'See more ↓';
     }
 });
 
