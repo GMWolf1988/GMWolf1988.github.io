@@ -1,11 +1,11 @@
 // All project data in one place
 const projects = [
-    {
-        title: "QuestCraft",
-        description: "A C# text-based game I designed and developed to explore the effectiveness of procedural content generation (PCG) in quest design.",
+   {
+        title: "Data Scrapper",
+        description: "A modular, easy-to-use web scraping application I developed using Python and TTkinter for the GUI.",
         status: "Complete",
         statusColor: "green",
-        link: "https://github.com/GMWolf1988/QuestCraft"
+        link: "https://github.com/GMWolf1988/data-scrapper"
     },
     {
         title: "Coffee Cafe",
@@ -20,6 +20,13 @@ const projects = [
         status: "Complete",
         statusColor: "green",
         link: "https://github.com/GMWolf1988/html5-sass-bootstrap"
+    },
+   {   
+        title: "QuestCraft",
+        description: "A C# text-based game I designed and developed to explore the effectiveness of procedural content generation (PCG) in quest design.",
+        status: "Complete",
+        statusColor: "green",
+        link: "https://github.com/GMWolf1988/QuestCraft"
     },
     {
         title: "Mighty Putter",
