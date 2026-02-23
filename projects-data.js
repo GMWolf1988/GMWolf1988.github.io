@@ -1,18 +1,18 @@
 // All project data in one place
 const projects = [
    {
-        title: "Data Scrapper",
+        title: "Data Scraper",
         description: "A modular, easy-to-use web scraping application I developed using Python and TTkinter for the GUI. Fully automated testing with Pytest.",
         status: "Complete",
         statusColor: "green",
-        link: "https://github.com/GMWolf1988/data-scrapper"
+        link: "https://github.com/GMWolf1988/data-scraper"
     },
     {
         title: "Editorial Theme",
-        description: "A fully responsive website theme I developed using HTML5, Sass, and Bootstrap, based on the HTML5 UP Editorial design.",
+        description: "A fully responsive website theme I developed using HTML5, SCSS, and Bootstrap, based on the HTML5 UP Editorial design.",
         status: "Complete",
         statusColor: "green",
-        link: "https://github.com/GMWolf1988/html5-sass-bootstrap"
+        link: "https://github.com/GMWolf1988/html5-scss-bootstrap"
     },
     {
         title: "Coffee Cafe",
