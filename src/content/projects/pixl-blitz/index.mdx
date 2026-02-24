@@ -1,0 +1,38 @@
+---
+title: "Pixl Blitz"
+description: "A fast-paced browser-based shooting game I developed with HTML5 Canvas, JavaScript using GSAP and pythagorean maths."
+summary: "A fast-paced browser-based shooting game built with HTML5 Canvas"
+type: "Game"
+status: "Complete"
+url: "https://github.com/GMWolf1988/pixl-blitz"
+tags: ['javascript', 'html5-canvas', 'gsap', 'game-dev']
+weight: 300
+---
+
+import Gallery from "../../../components/Gallery.astro";
+import pbGame from "./pb-game.png";
+import pbScore from "./pb-score.png";
+
+Pixl-Blitz is a fast-paced browser-based retro pixel shooter developed using HTML5 Canvas, JavaScript, and the GSAP animation library. 
+The game delivers classic arcade shooter mechanics where the player defends a central avatar from waves of enemies spawning along the edges of the screen. 
+With smooth animations, dynamic enemy behavior, and responsive controls, Pixl-Blitz showcases lightweight game development using modern web technologies and animation workflows to create an engaging browser gaming experience.
+
+Players control a central character that can rotate 360 degrees to shoot incoming enemies. 
+Enemies spawn randomly from the edges of the canvas and move towards the player, creating an intense and challenging gameplay loop. 
+The game features a scoring system based on how long the player survives and how many enemies they defeat, encouraging replayability and skill improvement. 
+
+Current features include:
+
+    * Uses Canvas for real-time 2D pixel graphics without external game engines
+    * Integrates GSAP for silky animation effects on enemies and projectiles
+    * Click anywhere on the screen to aim and shoot toward the pointer
+    * Enemies spawn randomly from screen edges and increase in challenge over time
+    * Particle explosions and HSL color variations add vibrant retro visuals
+    * Ongoing score display and end-of-game summary to motivate replayability
+    
+
+<Gallery items={{
+    "Pixl Blitz Game": pbGame,
+    "Pixl Blitz Final Score": pbScore
+}} />
+

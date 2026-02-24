@@ -1,0 +1,37 @@
+---
+title: "Game Of Kingdoms"
+description: "A 3D Tower Defense game I built within Unity (C#), using a grid and a A* pathfinding algorithm."
+summary: "A 3D Tower Defense game built in Unity with A* pathfinding"
+type: "Game"
+status: "Archived"
+url: "https://github.com/GMWolf1988/Game_Of_Kingdoms"
+tags: ['csharp', 'unity', 'pathfinding', 'game-dev']
+weight: 450
+---
+
+import Gallery from "../../../components/Gallery.astro";
+import gokGrid from "./gok-grid.png";
+import gokGame from "./gok-game.png";
+
+Game Of Kingdoms is a grid‑based tower defence game developed in Unity (C#) that demonstrates core gameplay systems 
+and intelligent enemy pathfinding. Designed to showcase the implementation of the A* algorithm for dynamic enemy navigation, 
+the project features strategic placement of defensive units, resource management, and responsive AI movement 
+via raycasting. Built as both an academic exercise and a technical demonstration, Game Of Kingdoms highlights 
+Unity development, AI logic, grid management, and gameplay architecture.
+
+Players strategically place various catapults on a grid to defend against waves of enemies attempting to reach the endpoint. 
+The A* pathfinding algorithm enables enemies to dynamically navigate around obstacles and towers, creating a challenging and engaging gameplay experience. 
+The project emphasizes clean code architecture, efficient pathfinding implementation, and practical game development principles within the Unity engine.
+
+Current features include:
+
+    * Grid-based tower defense gameplay with strategic unit placement and resource management
+    * Enemy units dynamically navigate the battlefield using the A* pathfinding algorithm for responsive AI movement
+    * Strategic grid layout for unit placement, enemy movement, and gameplay interactions
+    * Gold economy that steadily increases resources for placing defensive structures
+    * Designed with strong technical foundations for extending gameplay, AI, and UI features
+
+<Gallery items={{
+    "Game of Kingdoms Grid": gokGrid,
+    "Game of Kingdoms Game": gokGame
+}} />

@@ -1,0 +1,38 @@
+---
+title: "Mighty Putter"
+description: "A 2D game I developed using C++ and SDL, showcasing power-ups, logging, and collision detection using the Separating Axis Theorem."
+summary: "A 2D game developed using C++ and SDL with advanced collision detection"
+url: "https://github.com/GMWolf1988/Mighty-Putter-SDL-Cpp"
+type: "Game"
+status: "Complete"
+tags: ['cpp', 'sdl', 'collision-detection', 'game-dev']
+weight: 250
+---
+
+import Gallery from "../../../components/Gallery.astro";
+import mpStart from "./mp-intro.png";
+import mpGame from "./mp-game.png";
+
+Mighty Putter is a 2D mini golf game I developed in C++ using the SDL (Simple DirectMedia Layer) library as part of a university assignment.
+The game highlights several core game development principles including real-time collision detection using the Separating Axis Theorem (SAT), 
+interactive power-ups, audio integration, and logging for debugging and event tracking. 
+This project demonstrates both technical proficiency in native C++ game programming and practical implementation of physics fundamentals for accurate gameplay mechanics
+
+The game features a variety of mini golf courses with increasing difficulty, each designed to challenge the player's precision and strategy. 
+Players can collect power-ups that provide temporary abilities such as increased ball speed or the ability to slow down obstacle movement. 
+The collision detection system ensures realistic interactions between the golf ball, course boundaries, and obstacles, providing an engaging and immersive gaming experience.        
+
+Current features include:
+
+    * A fully playable mini golf experience rendered with SDL graphics and input handling
+    * Separating Axis Theorem (SAT) collision detection for precise physics response
+    * Power-Ups system
+    * Runtime logging support to track events, improve debugging, and analyse game flow
+    * Sound effects and music imported and managed using SDL audio features to enhance player immersion
+    
+
+<Gallery items={{
+    "Mighty Putter Start": mpStart,
+    "Mighty Putter Game": mpGame,
+}} />
+

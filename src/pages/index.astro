@@ -1,0 +1,166 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { loadAndFormatCollection } from "../util/collection";
+
+let projects: any[] = (await loadAndFormatCollection("projects", false)).sort(
+    (a: any, b: any) => a.data.weight - b.data.weight,
+);
+
+let firstThreeProjects: any[] = projects.slice(0, 3);
+let remainingProjects: any[] = projects.slice(3);
+---
+
+<Layout>
+    <div class="flex flex-col min-h-screen px-4 py-4">
+        <div class="max-w-4xl mx-auto space-y-8 flex-1">
+            <header class="space-y-6">
+                <Header enableHomeLink={false} />
+
+                <div class="intro-box text-gray-300 leading-relaxed">
+                    <p>Hi. I'm Gareth, a software developer.</p>
+                    <p>
+                        I have a games computing background with experience in
+                        building scalable applications, APIs, modern web
+                        frameworks, UI/UX and working with database
+                        technologies.
+                    </p>
+                </div>
+            </header>
+
+            <section class="panel projects-panel">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl text-orange-300">Projects</h2>
+                    <button
+                        id="openProjectsModal"
+                        class="text-cyan-300 text-sm px-4 py-1.5 rounded-full border border-cyan-300/30 bg-transparent hover:bg-transparent transition"
+                    >
+                        See more ↓
+                    </button>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4 projects-grid">
+                    {
+                        firstThreeProjects.map((project: any) => (
+                            <ProjectCard project={project} />
+                        ))
+                    }
+                </div>
+
+                <div class="more-projects hidden">
+                    <div class="grid md:grid-cols-3 gap-4 mt-4">
+                        {
+                            remainingProjects.map((project: any) => (
+                                <ProjectCard project={project} />
+                            ))
+                        }
+                    </div>
+
+                    <div class="text-center text-sm text-gray-400 mt-4">
+                        <span>Check out my other projects on</span>
+                        <a href="https://youtube.com/@garethmason7920" target="_blank" class="video-link underline">
+                            Youtube
+                        </a>
+                        <span>and</span>
+                        <a href="https://linkedin.com/in/gareth-mason-08a070226/" target="_blank" class="video-link underline">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel proficiencies-panel">
+                <h2 class="text-xl text-orange-300 mb-4 font bold">
+                    Proficiencies
+                </h2>
+
+                <p class="text-sm text-gray-400 mb-6">
+                    Here are some examples of technologies I'm experienced with:
+                </p>
+
+                <div class="space-y-4">
+                    <div>
+                        <div class="text-sm text-gray-400 mb-2">Languages</div>
+                        <div class="flex flex-wrap">
+                            <span class="tag">C#</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">SCSS</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="text-sm text-gray-400 mb-2">Frameworks</div>
+                        <div class="flex flex-wrap">
+                            <span class="tag">React</span>
+                            <span class="tag">React Native</span>
+                            <span class="tag">.NET</span>
+                            <span class="tag">Bootstrap</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Astro</span>
+                            <span class="tag">Material UI</span>
+                            <span class="tag">Chakra UI</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">Flask</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="text-sm text-gray-400 mb-2">
+                            Game Engines
+                        </div>
+                        <div class="flex flex-wrap">
+                            <span class="tag">Unity</span>
+                            <span class="tag">Godot</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="text-sm text-gray-400 mb-2">Databases</div>
+                        <div class="flex flex-wrap">
+                            <span class="tag">MySQL</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="text-sm text-gray-400 mb-2">Editors</div>
+                        <div class="flex flex-wrap">
+                            <span class="tag">VS Code</span>
+                            <span class="tag">Visual Studio</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="text-sm text-gray-400 mb-2">Platforms</div>
+                        <div class="flex flex-wrap">
+                            <span class="tag">Desktop</span>
+                            <span class="tag">Web</span>
+                            <span class="tag">Mobile</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="text-sm text-gray-400 mb-2">
+                            Tools & Services
+                        </div>
+                        <div class="flex flex-wrap">
+                            <span class="tag">Git</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Azure</span>
+                            <span class="tag">Postman</span>
+                            <span class="tag">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</Layout>

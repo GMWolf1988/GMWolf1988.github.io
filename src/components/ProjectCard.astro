@@ -1,0 +1,17 @@
+---
+import { statusToBadgeClass } from "../util/projects";
+
+const { project } = Astro.props;
+
+const classes = statusToBadgeClass(project.data.status);
+---
+
+<a href={project.absoluteURL} class="card block">
+    <div class="flex justify-between items-start mb-3">
+	<h3 class="text-base font-medium">{project.data.title}</h3>
+	<span class:list={["status-badge", classes]}>{project.data.status}</span>
+    </div>
+    <p class="text-sm text-gray-400">
+	{project.data.description}
+    </p>
+</a>
