@@ -1,0 +1,10 @@
+---
+import { Image as AstroImage } from "astro:assets";
+
+const { src, alt, caption, width = "auto", height = "auto", inferSize = false, zoomable = true, style = "" } = Astro.props;
+---
+
+<div class="image-container">
+    <AstroImage src={src} alt={alt} width={width} height={height} inferSize={inferSize} style={style} />
+    {caption && <div class="caption">{caption}</div>}
+</div>

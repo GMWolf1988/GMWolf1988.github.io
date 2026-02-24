@@ -1,27 +1,46 @@
-# My Portfolio Website
+# Astro Starter Kit: Basics
 
-## Overview
+```sh
+npm create astro@latest -- --template basics
+```
 
-Welcome to my portfolio repository!
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-This is a modern, responsive portfolio website i built for myself, as a software developer with a games computing background. The site features a sleek, glassmorphic design with dynamic theme switching, animated project displays, and an expandable interface that showcases technical skills and project work. Fully responsive for any media device for clear reading.
+## 🚀 Project Structure
 
-You are free to use, modify, and distribute this code for personal or 
-commercial purposes, provided that you include visible attribution in 
-the footer linking back to [your site/repo].
+Inside of your Astro project, you'll see the following folders and files:
 
-## Why no framework ? 
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src
+│   ├── assets
+│   │   └── astro.svg
+│   ├── components
+│   │   └── Welcome.astro
+│   ├── layouts
+│   │   └── Layout.astro
+│   └── pages
+│       └── index.astro
+└── package.json
+```
 
-I chose vanilla JavaScript for my portfolio because it's fundamentally a static site with simple interactions. Adding React would introduce 40-50KB of overhead for functionality I can achieve in 2-12KB of vanilla JS. It demonstrates that I understand the performance implications of my architectural decisions and can distinguish between when frameworks add value versus when they're unnecessary complexity. For my other projects, I used React because they had complex state management requirements that justified the framework
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-## Core Technologies
+## 🧞 Commands
 
-- HTML5 - Semantic markup structure
-- CSS3 - Advanced styling with gradients, backdrop filters, and animations
-- Vanilla JavaScript - No frameworks, pure DOM manipulation for interactions
-- Tailwind CSS (CDN) - Utility-first CSS framework for rapid styling
+All commands are run from the root of the project, from a terminal:
 
-<img width="1055" height="1242" alt="image" src="https://github.com/user-attachments/assets/91b61c50-ec9c-4e48-a2f7-53df492b69d2" />
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-<img width="383" height="838" alt="image" src="https://github.com/user-attachments/assets/02737166-4c61-46dd-bc13-553dae5ea137" />
+## 👀 Want to learn more?
 
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
