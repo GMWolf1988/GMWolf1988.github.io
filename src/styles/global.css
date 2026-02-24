@@ -599,7 +599,7 @@ body.light-theme .theme-modal-btn-cancel:hover {
     left: 0;
     right: 0;
     z-index: 100;
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -618,6 +618,7 @@ body.light-theme .sticky-header.scrolled {
 .hero-section {
     margin-top: 80px;
     margin-bottom: 2rem;
+    padding: 0 1rem;
 }
 
 .hero-container {
