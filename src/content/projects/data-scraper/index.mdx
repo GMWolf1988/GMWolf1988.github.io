@@ -15,7 +15,16 @@ import imageExport from "./Export.png";
 
 Data Scraper is a modular, easy-to-use web scraping application I developed using Python and TTkinter for the GUI. It provides a user-friendly interface for extracting data from websites with fully automated testing powered by Pytest.
 
-The application is designed with modularity in mind, making it easy to extend and customize for different scraping needs. It features a clean architecture that separates concerns between the UI, scraping logic, and data export functionality.
+The application is designed with modularity in mind, making it easy to extend and customise for different scraping needs. It features a clean architecture that separates concerns between the UI, scraping logic, and data export functionality.
+
+This application uses pytest for automated testing with comprehensive unit and integration tests covering all core functionality. 
+The tests validate HTTP client operations including URL validation, timeout handling, and error management using mocked requests to avoid real network calls. 
+HTML parsing tests ensure proper extraction of elements by selectors, tags, classes, and IDs, along with links, images, tables, and graceful handling of malformed HTML. 
+Data extraction tests verify regex pattern matching for emails, phone numbers, and prices in multiple currencies, plus structured data and metadata extraction. 
+
+Export functionality tests cover JSON, CSV, Excel, and text formats with unicode handling, custom headers, and timestamp generation. 
+Integration tests validate the main scrapper orchestration, ensuring all components work together for various scraping tasks like links, images, tables, and contact information, 
+with page caching and multiple export formats, all using mocked responses for fast, reliable execution.
 
 Current features include:
 
