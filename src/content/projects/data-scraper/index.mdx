@@ -17,14 +17,12 @@ Data Scraper is a modular, easy-to-use web scraping application I developed usin
 
 The application is designed with modularity in mind, making it easy to extend and customise for different scraping needs. It features a clean architecture that separates concerns between the UI, scraping logic, and data export functionality.
 
-This application uses pytest for automated testing with comprehensive unit and integration tests covering all core functionality. 
-The tests validate HTTP client operations including URL validation, timeout handling, and error management using mocked requests to avoid real network calls. 
-HTML parsing tests ensure proper extraction of elements by selectors, tags, classes, and IDs, along with links, images, tables, and graceful handling of malformed HTML. 
-Data extraction tests verify regex pattern matching for emails, phone numbers, and prices in multiple currencies, plus structured data and metadata extraction. 
-
-Export functionality tests cover JSON, CSV, Excel, and text formats with unicode handling, custom headers, and timestamp generation. 
-Integration tests validate the main scrapper orchestration, ensuring all components work together for various scraping tasks like links, images, tables, and contact information, 
-with page caching and multiple export formats, all using mocked responses for fast, reliable execution.
+The application uses pytest for automated testing, with both unit and integration tests covering the main features.
+The tests check the HTTP client, including URL validation, timeouts, and error handling. Network requests are mocked so no real internet calls are made.
+HTML parsing tests confirm that elements can be correctly extracted using selectors, tags, classes, and IDs. They also verify links, images, tables, and ensure the app handles malformed HTML without crashing.
+Data extraction tests confirm the system can accurately detect predefined text patterns and structured information within sample content.
+Export tests cover JSON, CSV, Excel, and text formats, including unicode support, custom headers, and timestamps.
+Integration tests ensure the main scraper works as a whole — combining scraping, caching, and exporting — using mocked responses for fast and reliable testing.
 
 Current features include:
 
