@@ -1,0 +1,17 @@
+---
+const { post } = Astro.props;
+const publishedDate = post.data.pubDate.toISOString();
+const formattedDate = post.data.pubDate.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+});
+---
+
+<a href={post.absoluteURL} class="card post-card block">
+    <div>
+        <h3 class="text-base font-medium">{post.data.title}</h3>
+        <time class="post-date" datetime={publishedDate}>{formattedDate}</time>
+    </div>
+    <p class="text-sm text-gray-400">{post.data.description}</p>
+</a>

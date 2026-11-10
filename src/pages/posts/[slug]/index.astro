@@ -1,0 +1,77 @@
+---
+import { render } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import { loadAndFormatCollection } from "../../../util/collection";
+
+export async function getStaticPaths() {
+    const posts = await loadAndFormatCollection("posts", false);
+
+    return posts.map((post: any) => ({
+        params: { slug: post.relativeURL },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const posts: any[] = (await loadAndFormatCollection("posts", false)).sort(
+    (a: any, b: any) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+const currentIndex = posts.findIndex((item: any) => item.id === post.id);
+const newerPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
+const olderPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
+const publishedDate = post.data.pubDate.toISOString();
+const formattedDate = post.data.pubDate.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+});
+---
+
+<Layout title={post.data.title}>
+    <header class="sticky-header">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <Header enable-home-link={true} />
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-container">
+            <h1 class="hero-title">{post.data.title}</h1>
+            <p class="hero-subtitle">{post.data.summary}</p>
+        </div>
+    </section>
+
+    <main class="content-section">
+        <div class="info-badges">
+            <span class="info-badge">
+                <span class="label">Published:</span>
+                <time class="value" datetime={publishedDate}>{formattedDate}</time>
+            </span>
+        </div>
+
+        <article class="post-content">
+            <Content />
+        </article>
+
+        <nav class="project-nav" aria-label="Post navigation">
+            <div>
+                {newerPost && (
+                    <a href={newerPost.absoluteURL} class="nav-link">
+                        <span>‹ Newer post</span>
+                        {newerPost.data.title}
+                    </a>
+                )}
+            </div>
+            <div class="text-right">
+                {olderPost && (
+                    <a href={olderPost.absoluteURL} class="nav-link">
+                        <span>Older post ›</span>
+                        {olderPost.data.title}
+                    </a>
+                )}
+            </div>
+        </nav>
+    </main>
+</Layout>

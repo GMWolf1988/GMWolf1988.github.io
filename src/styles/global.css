@@ -171,6 +171,27 @@ main ul {
     background-color: rgba(160, 160, 160, 0.5);
 }
 
+.post-card {
+    text-decoration: none;
+}
+
+.post-card h3 {
+    max-width: none;
+}
+
+.post-card > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.post-date {
+    color: #9ca3af;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
 /* ===== Tags ===== */
 .tag {
     display: inline-block;
@@ -194,34 +215,6 @@ main ul {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.05em;
-}
-
-/* ===== Buttons ===== */
-.social-icon {
-    width: 34px;
-    height: 34px;
-    border-radius: 999px;
-    background: linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.08),
-        rgba(255, 255, 255, 0.02)
-    );
-    box-shadow:
-        0 6px 16px rgba(0, 0, 0, 0.4),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    transform: scale(1.05);
-    box-shadow:
-        0 10px 24px rgba(0, 0, 0, 0.45),
-        inset 0 0 0 1px color-mix(in srgb, var(--accent-color) 70%, transparent);
 }
 
 /* ===== See More Link ===== */
@@ -257,6 +250,10 @@ main ul {
     padding: 1.5rem;
     background: transparent;
     box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+}
+
+.intro-box a:hover {
+    color: #fff;
 }
 
 .intro-box::before {
@@ -507,6 +504,42 @@ main ul {
 
 .project-description a:hover {
     color: #93c5fd;
+}
+
+.post-content {
+    color: #d1d5db;
+    line-height: 1.8;
+}
+
+.post-content h1,
+.post-content h2 {
+    color: #fff;
+    line-height: 1.3;
+    margin: 2rem 0 1rem;
+}
+
+.post-content h1 {
+    font-size: 2rem;
+}
+
+.post-content h2 {
+    font-size: 1.5rem;
+}
+
+.post-content p {
+    margin-bottom: 1rem;
+}
+
+.post-content .post-external-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.post-content .post-external-link:hover {
+    color: #fff;
 }
 
 /* Features List */

@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import PostCard from "../components/PostCard.astro";
 import { loadAndFormatCollection } from "../util/collection";
 
 let projects: any[] = (await loadAndFormatCollection("projects", false)).sort(
@@ -9,6 +10,10 @@ let projects: any[] = (await loadAndFormatCollection("projects", false)).sort(
 );
 
 let firstThreeProjects: any[] = projects.slice(0, 3);
+const posts: any[] = await loadAndFormatCollection("posts", false);
+const latestPost = posts.sort(
+    (a: any, b: any) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+)[0];
 ---
 
 <Layout>
@@ -21,16 +26,71 @@ let firstThreeProjects: any[] = projects.slice(0, 3);
                     </div>
                 </div>
 
-                <div class="intro-box text-gray-300 leading-relaxed">
+                <div class="intro-box text-gray-300 leading-relaxed space-y-3">
                     <p>Hi. I'm Gareth, a software developer.</p>
                     <p>
                         I have a games computing background with experience in
                         building scalable applications, APIs, modern web
                         frameworks, UI/UX and working with database
-                        technologies.
+                        technologies. 
+                    </p>
+                    <p>
+                        Check out my latest posts and projects below, or find me on
+                        <a
+                            href="https://github.com/GMWolf1988"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-1 accent-text no-underline"
+                        >
+                            GitHub
+                            <svg
+                                aria-hidden="true"
+                                class="h-3 w-3"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M14 3h7v7m0-7L10 14" />
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            </svg>
+                        </a>
+                        and
+                        <a
+                            href="https://www.linkedin.com/in/gareth-mason-08a070226/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-1 accent-text no-underline"
+                        >
+                            LinkedIn
+                            <svg
+                                aria-hidden="true"
+                                class="h-3 w-3"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M14 3h7v7m0-7L10 14" />
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            </svg>
+                        </a>.
                     </p>
                 </div>
             </header>
+
+            <section class="panel projects-panel">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl accent-text mb-4 font-bold">Posts</h2>
+                    <a
+                        href="/posts/"
+                        class="projects-more-link accent-button text-sm px-4 py-1.5 rounded-full border bg-transparent hover:bg-transparent transition"
+                    >
+                        See more →
+                    </a>
+                </div>
+                {latestPost && <PostCard post={latestPost} />}
+            </section>
 
             <section class="panel projects-panel">
                 <div class="flex justify-between items-center mb-6">
@@ -80,7 +140,7 @@ let firstThreeProjects: any[] = projects.slice(0, 3);
                     </article>
                     <article class="proficiency-group">
                         <h3>Game Engines</h3>
-                        <ul><li>Unity</li><li>Godot</li></ul>
+                        <ul><li>Unity</li><li>Godot</li><li>Unreal 5</li></ul>
                     </article>
                     <article class="proficiency-group">
                         <h3>Databases</h3>

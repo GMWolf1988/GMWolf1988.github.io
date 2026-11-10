@@ -1,0 +1,36 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import PostCard from "../../components/PostCard.astro";
+import { loadAndFormatCollection } from "../../util/collection";
+
+const posts: any[] = (await loadAndFormatCollection("posts", false)).sort(
+    (a: any, b: any) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+---
+
+<Layout title="Posts">
+    <div class="min-h-screen px-4 py-4">
+        <header class="sticky-header">
+            <div class="max-w-4xl mx-auto flex justify-between items-center">
+                <Header enable-home-link={true} />
+            </div>
+        </header>
+
+        <main class="projects-index-content max-w-4xl mx-auto space-y-6 w-full">
+            <header class="space-y-2">
+                <h1 class="text-3xl font-semibold accent-text">Posts</h1>
+                <p class="text-gray-400">
+                    Notes, updates, and stories about my projects and development journey.
+                </p>
+            </header>
+
+            <section
+                class="projects-list grid md:grid-cols-2 gap-4"
+                aria-label="All posts"
+            >
+                {posts.map((post: any) => <PostCard post={post} />)}
+            </section>
+        </main>
+    </div>
+</Layout>
