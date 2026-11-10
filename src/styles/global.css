@@ -538,6 +538,10 @@ main ul {
     text-decoration: none;
 }
 
+.post-content a {
+    font-weight: 700;
+}
+
 .post-content .post-external-link:hover {
     color: #fff;
 }
