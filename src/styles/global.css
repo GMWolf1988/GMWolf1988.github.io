@@ -539,7 +539,15 @@ main ul {
 }
 
 .post-content a {
-    font-weight: 700;
+    font-weight: 600;
+}
+
+.post-content a strong {
+    font-weight: 600;
+}
+
+.post-content .post-game-title {
+    font-weight: 600;
 }
 
 .post-content .post-external-link:hover {
