@@ -138,7 +138,7 @@ main ul {
     border: 1px solid rgba(200, 200, 200, 0.171);
     border-radius: 12px;
     padding: 1.25rem;
-    transition: transform 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
     display: flex;
     flex-direction: column;
 }
@@ -159,12 +159,16 @@ main ul {
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    border: 1px solid rgba(200, 200, 200, 0.3);
+    background-color: rgba(160, 160, 160, 0.2);
+    border-color: rgba(200, 200, 200, 0.3);
 }
 
 .projects-list .card {
     background-color: rgba(128, 128, 128, 0.45);
+}
+
+.projects-list .card:hover {
+    background-color: rgba(160, 160, 160, 0.5);
 }
 
 /* ===== Tags ===== */
